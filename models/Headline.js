@@ -9,6 +9,25 @@ var Schema = mongoose.Schema;
 
 // Create the headlineSchema with our schema class
 var headlineSchema = new Schema({
+  headline:{
+    type:String,
+    required:true
+  },
+  summary:{
+    type:String,
+    required:true
+  },
+  url:{
+    type:String,
+    required:true
+  },
+    date:{
+      type:String,
+    },
+    saved:{
+      type:Boolean,
+      default: false
+    } 
   // headline, a string, must be entered
 
   // summary, a string, must be entered
@@ -19,7 +38,6 @@ var headlineSchema = new Schema({
 
   // saved, boolean default false
 });
-
 // Create the Headline model using the headlineSchema
 var Headline = mongoose.model("Headline", headlineSchema);
 
